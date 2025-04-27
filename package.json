@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "deploy:custom": "node deploy-gh-pages.js"
   },
   "dependencies": {
     "@smastrom/react-rating": "^1.5.0",
