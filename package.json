@@ -6,7 +6,7 @@
   "homepage": "https://cygnusleoimirgalileo.github.io/Medilo",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cp .nojekyll dist/",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
