@@ -8,7 +8,7 @@ import "vazirmatn/Vazirmatn-font-face.css"; // Import Vazirmatn font
 
 import "./sass/style.scss";
 
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { LanguageProvider } from "./utils/LanguageContext";
 
 // Set default language to Farsi if not already set
@@ -79,9 +79,9 @@ try {
       <React.StrictMode>
         <React.Suspense fallback={<div>Loading...</div>}>
           <LanguageProvider>
-            <BrowserRouter>
+            <HashRouter>
               <App />
-            </BrowserRouter>
+            </HashRouter>
           </LanguageProvider>
         </React.Suspense>
       </React.StrictMode>
