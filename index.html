@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Medilo/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medilo- Medical & Health ReactJs Template</title>
+      <style>
+          /* Global styles for RTL support and language switcher */
+          .show {
+            display: block !important;
+          }
+
+          /* RTL support for body */
+          body.rtl {
+            direction: rtl;
+            text-align: right;
+            font-family: 'Vazirmatn', sans-serif;
+          }
+      </style>
+    <script type="module" crossorigin src="/Medilo/assets/index-DksGbZko.js"></script>
+    <link rel="stylesheet" crossorigin href="/Medilo/assets/index-C-siUB8Y.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+        // Check for language preference and apply RTL if needed
+        document.addEventListener('DOMContentLoaded', function() {
+          const storedLang = localStorage.getItem('language');
+          if (storedLang === 'fa') {
+            document.documentElement.setAttribute('lang', 'fa');
+            document.documentElement.setAttribute('dir', 'rtl');
+            document.body.classList.add('rtl');
+          }
+        });
+    </script>
+  </body>
+</html>
