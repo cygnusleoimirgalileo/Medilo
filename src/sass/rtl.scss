@@ -1,0 +1,199 @@
+// RTL-specific overrides
+
+// Set font family for RTL languages
+.rtl {
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+// General RTL overrides
+body.rtl {
+  direction: rtl;
+  text-align: right;
+  
+  // Reverse float directions
+  .float-start { 
+    float: right !important;
+  }
+  
+  .float-end {
+    float: left !important;
+  }
+  
+  // Reverse text alignment
+  .text-start {
+    text-align: right !important;
+  }
+  
+  .text-end {
+    text-align: left !important;
+  }
+  
+  // Reverse padding and margin
+  .ms-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+  }
+  
+  .me-auto {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+  
+  .ps-0, .ps-1, .ps-2, .ps-3, .ps-4, .ps-5 {
+    padding-left: 0 !important;
+    padding-right: var(--bs-padding);
+  }
+  
+  .pe-0, .pe-1, .pe-2, .pe-3, .pe-4, .pe-5 {
+    padding-right: 0 !important;
+    padding-left: var(--bs-padding);
+  }
+  
+  .ms-0, .ms-1, .ms-2, .ms-3, .ms-4, .ms-5 {
+    margin-left: 0 !important;
+    margin-right: var(--bs-margin);
+  }
+  
+  .me-0, .me-1, .me-2, .me-3, .me-4, .me-5 {
+    margin-right: 0 !important;
+    margin-left: var(--bs-margin);
+  }
+  
+  // Fix border radius
+  .rounded-start {
+    border-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: var(--bs-border-radius) !important;
+    border-bottom-right-radius: var(--bs-border-radius) !important;
+  }
+  
+  .rounded-end {
+    border-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-left-radius: var(--bs-border-radius) !important;
+    border-bottom-left-radius: var(--bs-border-radius) !important;
+  }
+  
+  // Reverse Bootstrap grid
+  .offset-1 { margin-left: 0; margin-right: 8.33333%; }
+  .offset-2 { margin-left: 0; margin-right: 16.66667%; }
+  .offset-3 { margin-left: 0; margin-right: 25%; }
+  .offset-4 { margin-left: 0; margin-right: 33.33333%; }
+  .offset-5 { margin-left: 0; margin-right: 41.66667%; }
+  .offset-6 { margin-left: 0; margin-right: 50%; }
+  .offset-7 { margin-left: 0; margin-right: 58.33333%; }
+  .offset-8 { margin-left: 0; margin-right: 66.66667%; }
+  .offset-9 { margin-left: 0; margin-right: 75%; }
+  .offset-10 { margin-left: 0; margin-right: 83.33333%; }
+  .offset-11 { margin-left: 0; margin-right: 91.66667%; }
+
+  // Fix flexbox directions
+  .flex-row {
+    flex-direction: row-reverse !important;
+  }
+  
+  .flex-row-reverse {
+    flex-direction: row !important;
+  }
+  
+  // Fix position properties
+  .start-0 {
+    left: auto !important;
+    right: 0 !important;
+  }
+  
+  .end-0 {
+    right: auto !important;
+    left: 0 !important;
+  }
+  
+  // Fix CSS transform properties
+  .translate-middle-x {
+    transform: translateX(50%) !important;
+  }
+  
+  // Fix SVG and icon directions
+  svg, i {
+    &.bi-arrow-left {
+      transform: scaleX(-1);
+    }
+    
+    &.bi-arrow-right {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+// Specific component overrides
+body.rtl {
+  // Header navigation
+  .cs_nav {
+    .navbar-nav {
+      padding-right: 0;
+    }
+    
+    .dropdown-menu {
+      left: auto;
+      right: 0;
+      text-align: right;
+    }
+  }
+  
+  // Sliders and carousels
+  .slick-slider {
+    direction: ltr; // Keep slider direction LTR for proper functioning
+    
+    .slick-slide {
+      direction: rtl; // But content inside slides should be RTL
+      text-align: right;
+    }
+  }
+  
+  // Button icons
+  .cs_btn {
+    &.cs_style_1 {
+      .cs_btn_icon {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+  
+  // Hero Section
+  .cs_hero_text {
+    text-align: right;
+  }
+  
+  // Blog posts
+  .cs_post_meta {
+    .cs_post_meta_left {
+      margin-right: 0;
+      margin-left: 15px;
+    }
+  }
+}
+
+// Custom RTL styles for specific sections
+body.rtl {
+  .cs_language_switcher {
+    .cs_language_dropdown {
+      right: auto;
+      left: 0;
+    }
+  }
+
+  // Custom modifications for Persian typography
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: normal;
+  }
+  
+  // Adjust main navigation in RTL
+  .cs_site_header {
+    .cs_toolbox {
+      margin-left: 0;
+      margin-right: 30px;
+    }
+  }
+}

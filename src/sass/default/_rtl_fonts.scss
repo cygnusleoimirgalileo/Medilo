@@ -1,0 +1,33 @@
+// Add Vazirmatn font to support Farsi
+
+// Font variables
+:root {
+  --vazir-font: 'Vazirmatn', sans-serif;
+}
+
+// RTL font face
+.rtl {
+  font-family: var(--vazir-font);
+  
+  h1, h2, h3, h4, h5, h6,
+  .cs_hero_title,
+  .cs_section_title,
+  .cs_btn,
+  .cs_tab_links li a {
+    font-family: var(--vazir-font);
+  }
+  
+  // Adjust font weight for Persian titles
+  h1, .cs_hero_title {
+    font-weight: 700;
+  }
+  
+  h2, h3, .cs_section_title {
+    font-weight: 600;
+  }
+  
+  // Adjust line height for Persian text
+  p, .cs_hero_subtitle, .cs_card_text, .cs_iconbox_text {
+    line-height: 1.8;
+  }
+}

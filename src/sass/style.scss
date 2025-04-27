@@ -1,0 +1,54 @@
+@import 'default/_fonts';
+@import 'default/_variable';
+@import 'default/_typography';
+@import 'default/_rtl_fonts';
+@import 'common/_preloader';
+@import 'common/_spacing';
+@import 'common/_general';
+@import 'common/_slider';
+@import 'common/_video-modal';
+@import 'common/_header';
+@import 'common/_footer';
+@import 'common/_sidebar';
+@import 'common/_language_switcher';
+@import 'shortcode/_hero';
+@import 'shortcode/_banner';
+@import 'shortcode/_iconbox';
+@import 'shortcode/_post';
+@import 'shortcode/_cta';
+@import 'shortcode/_testimonial';
+@import 'shortcode/_counter';
+@import 'shortcode/_casestudie';
+@import 'shortcode/_team';
+@import 'shortcode/_imagebox';
+@import 'shortcode/_pricing';
+@import 'shortcode/_card';
+@import 'shortcode/_tabs';
+/*--------------------------------
+ Extra css
+ -------------------------------*/
+.cs_hero.cs_style_1 .cs_hero_text {
+  background-color: inherit;
+  padding: inherit;
+  border-radius: inherit;
+  position: inherit;
+}
+.cs_tab_links.cs_style_1 li a span {
+  font-size: 19px;
+}
+.cs_card.cs_style_2 .cs_card_text {
+  max-width: 530px;
+}
+.cs_card.cs_style_2 .cs_card_title {
+  font-size: 27px;
+}
+.home_form_area .cs_form_field {
+  background-color: #fff;
+}
+.about-page-area .about-team hr{
+  display: none;
+}
+/*--------------------------------
+ RTL Support
+ -------------------------------*/
+@import 'rtl';
